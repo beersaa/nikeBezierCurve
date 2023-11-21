@@ -58,6 +58,10 @@
 					<div class="size-box" onclick="toggleBorder(this)">48.5</div>
 					<div class="size-box" onclick="toggleBorder(this)">49.5</div>
 				</div>
+				<div class="field-buttons">
+					<button class="bag">Add to Bag</button>
+					<button id="fav" class="fav" onclick="changeButtonText()">Favourite ♡</button> <!--♡ ♥️-->
+				</div>
 			</div>
 		</div>
 	</div>
@@ -68,6 +72,20 @@
 			box.classList.remove('selected-border');
 		});
 		element.classList.add('selected-border');
+	}
+	function changeButtonText() {
+		var button = document.getElementById('fav');
+
+		button.classList.add('button-transition');
+
+		setTimeout(function() {
+			if (button.textContent === 'Favourite ♡') {
+				button.textContent = 'Favourite ♥️';
+			} else {
+				button.textContent = 'Favourite ♡';
+			}
+			button.classList.remove('button-transition');
+		}, 300); 
 	}
 	</script>
 </body>

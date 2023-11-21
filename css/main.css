@@ -116,3 +116,40 @@ div{
 .selected-border {
     border-color: black !important;
 }
+.field-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    width: 350px;
+    height: 120px;
+}
+.bag{
+    width: 350px;
+    background-color: rgb(24, 24, 24);
+    color: white;
+    font-size: 15px;
+    font-weight: normal;
+    border-radius: 25px;
+    outline: 0px;
+    border: 0;
+}
+.bag:hover{
+    cursor: pointer;
+    background-color: rgb(87, 87, 87);
+}
+.fav{
+    margin-top: 10px;
+    background-color: white;
+    color: black;
+    width: 350px;
+    font-size: 15px;
+    border-radius: 25px;
+    outline: 0px;
+    border: 1px solid transparent;
+}
+.fav:hover{
+    cursor: pointer;
+    border-color: black;
+}
+.button-transition {
+    transition: all 0.3s ease-in-out; 
+}
