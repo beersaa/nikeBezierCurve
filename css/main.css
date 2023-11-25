@@ -111,7 +111,13 @@ html,body{
     width: 40%;
 }
 .picture-field{
-    width: 100%;
+    display: block;
+    position: absolute;
+}
+#canvas{
+    display: block;
+    position: absolute;
+    top:40px;
 }
 .field-right{
     padding-left: 5%;
