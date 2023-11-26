@@ -3,9 +3,8 @@
 <head>		
 	<title>Nike</title>
 	<meta charset="UTF-8" />
-
 	<link rel="shortcut icon" type="image/x-icon" href="slike/favicon.png" />
-	<link rel="stylesheet" href="css/main.css" type="text/css" media="all" />		
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="all" />	
 </head>
 <body>
 	<div class="top-menu">
@@ -20,7 +19,7 @@
 	</div>
 	<div class="first-box" id="first-box">
 		<div class="box-middle">
-			<div class="box-picture">
+			<div class="box-picture" id="box-picture">
 				<svg width="1013" height="505" viewBox="0 0 1005 505" preserveAspectRatio="xMidYMid" fill="000000" stroke="none">
 					<g>
 						<title>Layer 1</title>
@@ -65,8 +64,8 @@
 					<div class="size-box" onclick="toggleBorder(this)">49.5</div>
 				</div>
 				<div class="field-buttons">
-					<button class="bag">Add to Bag</button>
-					<button id="fav" class="fav" onclick="changeButtonText()">Favourite ♡</button> <!--♡ ♥️-->
+					<button class="bag">BUY</button>
+					<button id="fav" class="fav"  onclick="changeButtonFav()"><div id="fav-fav">Favourite</div><div id="fav-icon">♡</div></button> <!--♡ ♥️-->
 				</div>
 				<div class="list">
 					<ul>
@@ -101,6 +100,7 @@
 			</div>
 		</div>
 	</div>
+	<script src="javascript/noframework.waypoints.min.js"></script>
 	<script>
 	function toggleBorder(element) {
 		var sizeBoxes = document.querySelectorAll('.size-box');
@@ -109,23 +109,22 @@
 		});
 		element.classList.add('selected-border');
 	}
-	function changeButtonText() {
-		var button = document.getElementById('fav');
+	function changeButtonFav() {
+		var button = document.getElementById('fav-icon');
 
 		button.classList.add('button-transition');
 
 		setTimeout(function() {
-			if (button.textContent === 'Favourite ♡') {
-				button.textContent = 'Favourite ♥️';
+			if (button.textContent === '♡') {
+				button.textContent = '♥️';
 			} else {
-				button.textContent = 'Favourite ♡';
+				button.textContent = '♡';
 			}
 			button.classList.remove('button-transition');
 		}, 300); 
 	}
 	document.addEventListener("DOMContentLoaded", function() {
 		var links = document.querySelectorAll('.top-right-home, .top-right-buy, .top-right-content');
-
 		links.forEach(function(link) {
 			link.addEventListener('click', function(e) {
 				e.preventDefault();
@@ -133,8 +132,6 @@
 				links.forEach(function(otherLink) {
 					otherLink.classList.remove('top-right-selected');
 				});
-
-				this.classList.add('top-right-selected');
 
 				var targetId = this.getAttribute('href').substring(1);
 				var targetElement = document.getElementById(targetId);
@@ -148,6 +145,38 @@
 				}
 			});
 		});
+		const home = document.querySelector('.top-right-home');
+		const buy = document.querySelector('.top-right-buy');
+		const content = document.querySelector('.top-right-content');
+
+		var waypoint = new Waypoint({
+		element: document.getElementById('box-picture'),
+		handler: function(direction) {
+			home.style.backgroundColor = '#b6b6b6';
+			buy.style.backgroundColor = 'rgb(255, 255, 255)';
+			content.style.backgroundColor = 'rgb(255, 255, 255)';
+		},
+		})
+
+		var waypoint = new Waypoint({
+		element: document.getElementById('selection'),
+		handler: function(direction) {
+			buy.style.backgroundColor = '#b6b6b6';
+			home.style.backgroundColor = 'rgb(255, 255, 255)';
+			content.style.backgroundColor = 'rgb(255, 255, 255)';
+		},
+		offset: '80'
+		})
+
+		var waypoint = new Waypoint({
+		element: document.getElementById('info'),
+		handler: function(direction) {
+			content.style.backgroundColor = '#b6b6b6';
+			buy.style.backgroundColor = 'rgb(255, 255, 255)';
+			home.style.backgroundColor = 'rgb(255, 255, 255)';
+		},
+		offset: '80'
+		})
 	});
 	var canvas = document.getElementById('canvas');
 	var context = canvas.getContext('2d');
