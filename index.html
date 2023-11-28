@@ -14,7 +14,7 @@
 		<div class="top-right">
 			<div class="top-right-home" href="#first-box"><span>HOME</span></div>
 			<div class="top-right-buy" href="#selection"><span>BUY</span></div>
-			<div class="top-right-content" href="#info"><span>CONTENT</span>CONTENT</div>
+			<div class="top-right-content" href="#info"><span>CONTENT</span></div>
 		</div>
 	</div>
 	<div class="first-box" id="first-box">
@@ -153,20 +153,29 @@
 		var waypoint = new Waypoint({
 		element: document.getElementById('box-picture'),
 		handler: function(direction) {
-			home.style.backgroundColor = 'rgb(182, 182, 182)';
+			home.style.backgroundColor = 'rgb(182, 182, 182,0)';
+			home.style.textDecoration = 'underline';
+			home.style.fontSize = '20px';
 			buy.style.backgroundColor = 'rgb(255, 255, 255,0)';
+			buy.style.fontSize = '17px';
 			content.style.backgroundColor = 'rgb(255, 255, 255,0)';
+			content.style.fontSize = '17px';
 			navbar.style.backgroundColor = 'rgb(255, 255, 255,0)';
 			
 		},
+		offset: '80'
 		})
 
 		var waypoint = new Waypoint({
 		element: document.getElementById('selection'),
 		handler: function(direction) {
 			buy.style.backgroundColor = 'rgb(182, 182, 182)';
+			buy.style.fontSize = '20px';
 			home.style.backgroundColor = 'rgb(255, 255, 255)';
+			home.style.fontSize = '17px';
+			home.style.textDecoration = 'none';
 			content.style.backgroundColor = 'rgb(255, 255, 255)';
+			content.style.fontSize = '17px';
 			navbar.style.backgroundColor = 'rgb(255, 255, 255)';
 		},
 		offset: '80'
@@ -176,8 +185,12 @@
 		element: document.getElementById('info'),
 		handler: function(direction) {
 			content.style.backgroundColor = 'rgb(182, 182, 182)';
+			content.style.fontSize = '20px';
 			buy.style.backgroundColor = 'rgb(255, 255, 255)';
+			buy.style.fontSize = '17px';
 			home.style.backgroundColor = 'rgb(255, 255, 255)';
+			home.style.fontSize = '17px';
+			home.style.textDecoration = 'none';
 			navbar.style.backgroundColor = 'rgb(255, 255, 255)';
 		},
 		offset: '80'

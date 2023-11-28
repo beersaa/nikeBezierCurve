@@ -31,8 +31,9 @@ html,body{
     background-color: rgb(182, 182, 182);
 }
 .top-right-home{
-    background-color: rgb(182, 182, 182);
-    font-size: 17px;
+    text-decoration: underline;
+    font-size: 20px;
+    background-color: rgb(182, 182, 182,0);
     font-weight: 600;
     display: flex;
     width: 120px;
@@ -40,7 +41,6 @@ html,body{
     align-items: center;
 }
 .top-right-home:hover{
-    background-color: #b6b6b6;
     cursor: pointer;
     font-size: 20px;
 }
@@ -53,7 +53,6 @@ html,body{
     align-items: center;
 }
 .top-right-buy:hover{
-    background-color: #b6b6b6;
     cursor: pointer;
     font-size: 20px;
 }
@@ -66,9 +65,11 @@ html,body{
     align-items: center;
 }
 .top-right-content:hover{
-    background-color: #b6b6b6;
     cursor: pointer;
     font-size: 20px;
+}
+.top-right-span:hover{
+    text-decoration: underline;
 }
 .first-box {
     position: relative;
