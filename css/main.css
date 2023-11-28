@@ -10,27 +10,29 @@ html,body{
     height: 80px;
     position: fixed;
     top: 0;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255,0);
     display: flex;
     justify-content: space-between; 
     z-index: 1;
+
 }
 .menu-picture{
     margin-top: 20px;
-    padding-left: 20px;
+    margin-left: 500px;
 }
 .top-picture{
     height: 40px;
 }
 .top-right{
     display: flex;
+    margin-right: 500px;
 }
 .top-right-selected {
-    background-color: #b6b6b6;
+    background-color: rgb(182, 182, 182);
 }
 .top-right-home{
-    background-color: #b6b6b6;
-    font-size: 20px;
+    background-color: rgb(182, 182, 182);
+    font-size: 17px;
     font-weight: 600;
     display: flex;
     width: 120px;
@@ -40,9 +42,10 @@ html,body{
 .top-right-home:hover{
     background-color: #b6b6b6;
     cursor: pointer;
+    font-size: 20px;
 }
 .top-right-buy{
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 600;
     display: flex;
     width: 120px;
@@ -52,9 +55,10 @@ html,body{
 .top-right-buy:hover{
     background-color: #b6b6b6;
     cursor: pointer;
+    font-size: 20px;
 }
 .top-right-content{
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 600;
     display: flex;
     width: 120px;
@@ -64,6 +68,7 @@ html,body{
 .top-right-content:hover{
     background-color: #b6b6b6;
     cursor: pointer;
+    font-size: 20px;
 }
 .first-box {
     position: relative;
@@ -81,7 +86,7 @@ html,body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.7;
+    opacity: 0.4;
     z-index: -1;
 }
 .box-middle {
@@ -93,10 +98,10 @@ html,body{
 
 }
 .box-text {
-    margin-top: 30px;
+    margin-top: 120px;
     font-weight: 600;
     font-size: 30px;
-    color: rgb(0, 0, 0);
+    color: rgba(0,0,0,0.5);
 }
 .selection{
     position: relative;
