@@ -12,9 +12,9 @@
 			<img class="top-picture" src="slike/mainLogo.png" alt="Logo">
 		</div>
 		<div class="top-right">
-			<div class="top-right-home" href="#first-box"><span>HOME</span></div>
-			<div class="top-right-buy" href="#selection"><span>BUY</span></div>
-			<div class="top-right-content" href="#info"><span>CONTENT</span></div>
+			<div class="top-right-boxes" href="#first-box"><span	class="top-right-home">HOME</span></div>
+			<div class="top-right-boxes" href="#selection"><span	class="top-right-buy">BUY</span></div>
+			<div class="top-right-boxes" href="#info"><span	class="top-right-content">CONTENT</span></div>
 		</div>
 	</div>
 	<div class="first-box" id="first-box">
@@ -90,13 +90,25 @@
 			<p>Woven and synthetic fabric on the upper provides a lightweight fit and airy feel.</p>
 		</div>
 		<div class="foot">
-			<div class="author">
-				<a>Made by AB</a>
+			<div>
+				<div class="author">
+					
+				</div>
+				<div class="icons">
+					<a href="https://www.instagram.com/nike/" target="_blank"><img src="slike/001-instagram.png"></a>
+					<a href="https://www.facebook.com/nike" target="_blanx"><img src="slike/002-facebook.png"></a>
+					<a href="https://twitter.com/Nike" target="_blank"><img src="slike/003-twitter.png"></a>
+				</div>
 			</div>
-			<div class="icons">
-				<a href="https://www.instagram.com/nike/" target="_blank"><img src="slike/001-instagram.png"></a>
-				<a href="https://www.facebook.com/nike" target="_blanx"><img src="slike/002-facebook.png"></a>
-				<a href="https://twitter.com/Nike" target="_blank"><img src="slike/003-twitter.png"></a>
+			<div class="foot-bottom">
+				<div class="foot-bottom-inc">
+					<div>© 2023 Nike, Inc. All Rights Reserved</div>
+				</div>
+				<div class="foot-bottom-tos">
+					<div class="foot-tos">Terms of Use</div>
+					<div class="foot-company">Company Details</div>
+					<div class="pac">Privacy & Cookie Policy</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -155,7 +167,6 @@
 		element: document.getElementById('box-picture'),
 		handler: function(direction) {
 			home.style.backgroundColor = 'rgb(182, 182, 182,0)';
-			home.style.textDecoration = 'underline';
 			home.style.fontSize = '20px';
 			picture.style.filter = 'opacity(0.6)';
 			buy.style.backgroundColor = 'rgb(255, 255, 255,0)';
@@ -174,7 +185,6 @@
 			picture.style.filter = 'opacity(1)';
 			home.style.backgroundColor = 'rgb(255, 255, 255)';
 			home.style.fontSize = '17px';
-			home.style.textDecoration = 'none';
 			content.style.backgroundColor = 'rgb(255, 255, 255)';
 			content.style.fontSize = '17px';
 			navbar.style.backgroundColor = 'rgb(255, 255, 255)';
@@ -192,7 +202,6 @@
 			buy.style.fontSize = '17px';
 			home.style.backgroundColor = 'rgb(255, 255, 255)';
 			home.style.fontSize = '17px';
-			home.style.textDecoration = 'none';
 			navbar.style.backgroundColor = 'rgb(255, 255, 255)';
 		},
 		offset:'80'
