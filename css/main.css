@@ -304,15 +304,16 @@ html,body{
     margin-left: 20%;
 }
 .foot-bottom-tos{
-    margin-left: 20%;
+    margin-left: 30%;
     display: flex;
+    white-space: nowrap;
 }
 .foot-tos{
-
+    margin-left: 5%;
 }
-.foot-company{
-
+.foot-tou{
+    margin-left: 5%;
 }
 .pac{
-    
+    margin-left: 5%;
 }
