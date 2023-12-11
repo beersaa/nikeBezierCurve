@@ -290,21 +290,18 @@ html,body{
     height: 150px;
     background-color: #f5f5f5;
 }
-.author{
-    margin-left: 48%;
-    margin-top: 3.5%;
-}
-.icons{
-    margin-top: 3.5%;
-}
-.foot-bottom{
+.foot-content{
     display: flex;
+    padding-top: 3.5%;
 }
 .foot-bottom-inc{
-    margin-left: 20%;
+    margin-left: 18%;
+}
+.icons{
+    margin-left: 15%;
 }
 .foot-bottom-tos{
-    margin-left: 30%;
+    margin-left: 15%;
     display: flex;
     white-space: nowrap;
 }

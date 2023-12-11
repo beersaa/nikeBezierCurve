@@ -90,19 +90,14 @@
 			<p>Woven and synthetic fabric on the upper provides a lightweight fit and airy feel.</p>
 		</div>
 		<div class="foot">
-			<div>
-				<div class="author">
-					
+			<div class="foot-content">
+				<div class="foot-bottom-inc">
+					<div><a onclick="credits(this)">©</a> 2023 Nike, Inc. All Rights Reserved</div>
 				</div>
 				<div class="icons">
 					<a href="https://www.instagram.com/nike/" target="_blank"><img src="slike/001-instagram.png"></a>
 					<a href="https://www.facebook.com/nike" target="_blanx"><img src="slike/002-facebook.png"></a>
 					<a href="https://twitter.com/Nike" target="_blank"><img src="slike/003-twitter.png"></a>
-				</div>
-			</div>
-			<div class="foot-bottom">
-				<div class="foot-bottom-inc">
-					<div>© 2023 Nike, Inc. All Rights Reserved</div>
 				</div>
 				<div class="foot-bottom-tos">
 					<div class="foot-tos"><a style="text-decoration: none; color: black;" href="pdf/TermsOfSale.pdf" target="_blank">Terms of Sale</a></div>
@@ -113,7 +108,16 @@
 		</div>
 	</div>
 	<script src="javascript/noframework.waypoints.min.js"></script>
+	<script src="javascript/sweetalert2.all.min.js"></script>
 	<script>
+	function credits(){
+		Swal.fire({
+			title: "Author",
+			text: "https://github.com/beersaa",
+			icon: "question",
+			confirmButtonColor: "grey"
+		});
+	}
 	function toggleBorder(element) {
 		var sizeBoxes = document.querySelectorAll('.size-box');
 		sizeBoxes.forEach(function(box) {
