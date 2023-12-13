@@ -120,9 +120,13 @@
 			</div>
 		</div>
 	</div>
+
 	<script src="javascript/noframework.waypoints.min.js"></script>
 	<script src="javascript/sweetalert2.all.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.9.3/tsparticles.confetti.bundle.min.js"></script>
+	
 	<script>
+
 		function credits() {
 			Swal.fire({
 				title: "Author",
@@ -146,6 +150,13 @@
 			setTimeout(function () {
 				if (button.textContent === '♡') {
 					button.textContent = '♥️';
+					confetti({
+						particleCount: 200,
+						spread: 70,
+						colors: ["#ff0000", "ffffff"],
+						shapes: ["hearts", "hearts"],
+						zIndex: 100,
+					});
 				} else {
 					button.textContent = '♡';
 				}
