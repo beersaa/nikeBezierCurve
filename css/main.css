@@ -14,24 +14,14 @@ body {
     top: 0;
     background-color: rgb(255, 255, 255, 0);
     display: flex;
-    justify-content: space-between;
     z-index: 1;
+    justify-content: center;
+    align-items: center;
 
-}
-
-.menu-picture {
-    margin-top: 20px;
-    margin-left: 500px;
-}
-
-.top-picture {
-    height: 40px;
-    filter: opacity(0.6);
 }
 
 .top-right {
     display: flex;
-    margin-right: 500px;
 }
 
 .top-right-selected {
@@ -119,6 +109,11 @@ body {
 .selection {
     position: relative;
     height: 100%;
+    border-top: 10px solid;
+    border-image-slice: 1;
+}
+.border-gradiant{
+    border-image-source: linear-gradient(to left, #b6b6b6, #ffffff);
 }
 
 .field {
@@ -273,11 +268,14 @@ body {
 .info-text {
     text-align: center;
     font-size: 30px;
+    
 }
 
 .side1 {
     position: relative;
     height: 70%;
+    border-top: 10px solid;
+    border-image-slice: 1;
 }
 
 .side1::before {

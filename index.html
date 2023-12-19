@@ -9,17 +9,14 @@
 </head>
 
 <body>
-	<div class="top-menu">
-		<div class="menu-picture">
-			<img class="top-picture" src="slike/mainLogo.png" alt="Logo">
-		</div>
+	<div class="top-menu" id="top-menu">
 		<div class="top-right">
 			<div id="top-right-home" class="top-right-boxes" href="#first-box"><span class="top-right-home">HOME</span>
 			</div>
 			<div id="top-right-buy" class="top-right-boxes" href="#selection"><span class="top-right-buy">BUY</span>
 			</div>
 			<div id="top-right-content" class="top-right-boxes" href="#info"><span
-					class="top-right-content">CONTENT</span></div>
+				class="top-right-content">CONTENT</span></div>
 		</div>
 	</div>
 	<div class="first-box" id="first-box">
@@ -40,7 +37,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="selection" id="selection">
+	<div class="selection border-gradiant" id="selection">
 		<div class="field">
 			<div class="field-left">
 				<img class="picture-field" width="612px" height="786px" src="slike/shoeMAIN.jpg">
@@ -88,7 +85,7 @@
 	</div>
 	<div class="info" id="info">
 		<p class="info-text">Nike Air Max 270 Men's Shoes</p><br>
-		<div class="side1"></div>
+		<div class="side1 border-gradiant"></div>
 
 		<div class="space1">
 			<p>The sleek, running-inspired design roots you to everything Nike.</p>
@@ -126,6 +123,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.9.3/tsparticles.confetti.bundle.min.js"></script>
 	
 	<script>
+		const navbar = document.querySelector('.top-menu');
 
 		function credits() {
 			Swal.fire({
@@ -189,34 +187,34 @@
 			const home = document.querySelector('.top-right-home');
 			const buy = document.querySelector('.top-right-buy');
 			const content = document.querySelector('.top-right-content');
-			const navbar = document.querySelector('.top-menu');
-			const picture = document.querySelector('.top-picture');
 
 			var waypointHome = new Waypoint({
 				element: document.getElementById('box-picture'),
 				handler: function (direction) {
+					if(direction=='up'){
+						navbar.style.backgroundColor = 'rgb(255, 255, 255,0)';
+					}
+					if(direction=='down'){
+						navbar.style.backgroundColor = 'rgb(255, 255, 255,0.8)';
+					}
 					home.style.backgroundColor = 'rgb(182, 182, 182,0)';
 					home.style.fontSize = '20px';
-					picture.style.filter = 'opacity(0.6)';
 					buy.style.backgroundColor = 'rgb(255, 255, 255,0)';
 					buy.style.fontSize = '17px';
 					content.style.backgroundColor = 'rgb(255, 255, 255,0)';
 					content.style.fontSize = '17px';
-					navbar.style.backgroundColor = 'rgb(255, 255, 255,0)';
 				}
 			});
 
 			var waypointBuy = new Waypoint({
 				element: document.getElementById('selection'),
 				handler: function () {
-					buy.style.backgroundColor = 'rgb(182, 182, 182)';
 					buy.style.fontSize = '20px';
-					picture.style.filter = 'opacity(1)';
 					home.style.backgroundColor = 'rgb(255, 255, 255)';
 					home.style.fontSize = '17px';
 					content.style.backgroundColor = 'rgb(255, 255, 255)';
 					content.style.fontSize = '17px';
-					navbar.style.backgroundColor = 'rgb(255, 255, 255)';
+					navbar.style.backgroundColor = 'rgb(255, 255, 255,1)';
 				},
 				offset: '80'
 			});
@@ -224,14 +222,12 @@
 			var waypointContent = new Waypoint({
 				element: document.getElementById('info'),
 				handler: function (direction) {
-					content.style.backgroundColor = 'rgb(182, 182, 182)';
 					content.style.fontSize = '20px';
-					picture.style.filter = 'opacity(1)';
 					buy.style.backgroundColor = 'rgb(255, 255, 255)';
 					buy.style.fontSize = '17px';
 					home.style.backgroundColor = 'rgb(255, 255, 255)';
 					home.style.fontSize = '17px';
-					navbar.style.backgroundColor = 'rgb(255, 255, 255)';
+					navbar.style.backgroundColor = 'rgb(255, 255, 255,1)';
 				},
 				offset: '80'
 			});
