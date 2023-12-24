@@ -185,10 +185,12 @@ body {
 .size-box:hover {
     cursor: pointer;
     border-color: black;
+    background-color: rgb(226, 226, 226);
 }
 
 .selected-border {
     border-color: black !important;
+    background-color: rgb(226, 226, 226);
 }
 
 .field-buttons {
@@ -310,7 +312,7 @@ body {
     padding-right: 250px;
     padding-left: 250px;
     padding-top: 40px;
-    line-height: 60px;
+    line-height: 65px;
 }
 .space1-pic{
     width: 50%;
