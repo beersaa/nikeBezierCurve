@@ -46,7 +46,7 @@
 			<div class="field-right">
 				<p class="field-maintext">Nike Air Max 270</p><br>
 				<p class="field-textunder">Men's Shoes</p><br>
-				<p class="price">159.99$</p><br>
+				<p class="price">$159.99</p><br>
 				<p class="size">Select size</p><br>
 				<div class="size-select">
 					<div class="size-box" onclick="toggleBorder(this)">38.5</div>
@@ -68,7 +68,7 @@
 					<div class="size-box" onclick="toggleBorder(this)">49.5</div>
 				</div>
 				<div class="field-buttons">
-					<button class="bag">BUY</button>
+					<button id="buy" class="bag">BUY</button>
 					<button id="fav" class="fav" onclick="changeButtonFav()">
 						<div id="fav-fav">Favourite</div>
 						<div id="fav-icon">♡</div>
@@ -85,18 +85,39 @@
 		</div>
 	</div>
 	<div class="info" id="info">
-		<p class="info-text">Nike Air Max 270 Men's Shoes</p><br>
 		<div class="side1 border-gradiant"></div>
-
 		<div class="space1 border-gradiant">
-			<div class="space1-text">
-				Nike Air Max 270 is a shoe designed with the rigor of sport performance, but for the demands of all-day wear. The resulting combination of a large Max Air unit and a dual-density foam sole is ideal for anyone on the go. 			</div>
-			<div class="space1-pic">
-				<img src="slike/mainLogo.png" height="150px">
+			<p class="ctl">Complete the Look</p><br>
+			<div class="selected">
+				<div class="e1">
+					<div class="e1pic"></div>
+					<div class="e1text">Nike Sportswear Essential</div>
+					<div class="e1textu">Men's Mid-Rise Trousers</div>
+					<div class="e1textp">$69.99</div>
+				</div>
+				<div class="e2">
+					<div class="e2pic"></div>
+					<div class="e2text">Nike Everyday Cushioned</div>
+					<div class="e2textu">Training Crew Socks (6 Pairs)</div>
+					<div class="e2textp">$22</div>
+				</div>
+				<div class="e3">
+					<div class="e3pic"></div>
+					<div class="e3text">Jordan Dri-FIT Sport</div>
+					<div class="e3textu">Men's Woven Trousers</div>
+					<div class="e3textp">$59.99</div>
+				</div>
+				<div class="e4">
+					<div class="e4pic"></div>
+					<div class="e4text">NFL Seattle Seahawks (DK Metcalf)</div>
+					<div class="e4textu">Men's Game American Football Jersey</div>
+					<div class="e4textp">$124.99</div>
+				</div>
 			</div>
+			<div></div>
+			<div></div>
 		</div>
 		<div class="side2">
-
 		</div>
 		<div class="space2">
 			<p>Woven and synthetic fabric on the upper provides a lightweight fit and airy feel.</p>
@@ -248,9 +269,20 @@
 		context.bezierCurveTo(352.6, 415.2, 355.2, 425.7, 362.5, 422.1);
 		context.bezierCurveTo(369.7, 418.9, 397.7, 403.8, 403.4, 401.7);
 		context.closePath();
-		context.fillStyle = 'white';
+		context.fillStyle = 'rgba(255,255,255,0.8)';
 		context.fill();
 		context.stroke();
+
+		document.getElementById('buy').addEventListener('click', function (event) {
+        event.preventDefault();
+
+        var width = 500;
+        var height = 750; 
+        var left = (window.innerWidth - width) / 2;
+        var top = (window.innerHeight - height) / 2;
+        window.open("paypal.html", "CreditCardWindow", "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top);
+
+    });
 	</script>
 </body>
 

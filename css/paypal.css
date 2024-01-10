@@ -1,0 +1,135 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 100%;
+    width: 100%;
+}
+html{
+    min-height: 100%;
+}
+.main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.field{
+    width: 500px;
+    height: 750px;
+}
+.top{
+
+}
+.logo{
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 70px;
+}
+
+.bottom-text{
+    font-size: 15px;
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    margin-top: 20px;
+
+}
+.middle{
+    margin-top: 40px;
+    padding-left: 40px;
+}
+.email{
+
+}
+.email-input{
+    padding-left: 10px;
+    font-size: 15px;
+    height: 40px;
+    width: 410px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: darkgrey;
+    outline: 0px;
+    transition: 0.5s;
+}
+.email-input:focus{
+    border-color: #003087;
+    transition: 0.5s;
+}
+.forg-pass{
+    font-weight: 500;
+    font-size: 14px;
+    color: #009cde;
+    margin-top: 10px;
+}
+.next{
+
+}
+.button-next{
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+    background-color: darkblue;
+    outline: 0px;
+    border-radius: 4px;
+    border: none;
+    height: 45px;
+    width: 425px;
+}
+.button-next:hover{
+    cursor: pointer;
+    background-color: blue;
+}
+.line{
+    position: relative;
+    max-width: 420px;
+    margin-top: 20px;
+    text-align: center;
+}
+.line:before{
+    content:" ";
+    display: block;
+    height: 2px;
+    width: 190px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: rgb(201, 201, 201);
+}
+.line:after{
+    content:" ";
+    height: 2px;
+    width: 190px;
+    background: rgb(201, 201, 201);
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+.createAcc{
+    margin-top: 10px;
+}
+.createAcc-button{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+    background-color: rgb(201, 201, 201);
+    outline: 0px;
+    border-radius: 4px;
+    border: none;
+    height: 45px;
+    width: 425px;
+}
+.createAcc-button:hover{
+    cursor: pointer;
+    background-color: rgb(221, 221, 221);
+}
+.feet{
+    text-align: center;
+    margin-top: 270px;
+}

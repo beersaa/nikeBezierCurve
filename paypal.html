@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>		
+	<title>Pay with PayPal!</title>
+	<meta charset="UTF-8" />
+
+	<link rel="shortcut icon" type="image/x-icon" href="slike/paypal.png" />
+	<link rel="stylesheet" href="css/paypal.css" type="text/css" media="all" />		
+	<link rel="stylesheet" href="css/iziToast.min.css">
+    <script src="javascript/iziToast.min.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="main">
+		<div class="field">
+			<div class="top">
+				<div class="logo"><img src="slike/paypalMain.png" width="150px"></div>
+				<div class="bottom-text">Enter your email or mobile number to get started.</div>
+			</div>
+			<div class="middle">
+				<div class="email"><input class="email-input" placeholder="Email or mobile number"></div>
+				<div class="forg-pass"><a>Forgot email?</a></div>
+				<div class="next"><button class="button-next">Next</button></div>
+				<div class="line">or</div>
+				<div class="createAcc"><button id="createAcc" class="createAcc-button">Create a account</button></div>
+			</div>
+			<div class="feet">
+				<p>©Copyright to Paypal</p>
+			</div>
+		</div>
+	</div>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			var buttonNext = document.querySelector('.button-next');
+			if (buttonNext) {
+				buttonNext.addEventListener('click', function (event) {
+                    event.preventDefault();
+
+                	iziToast.error({
+                        title: 'Error',
+                        message: 'Currently not working!',
+						color:'blue',
+						maxWidth: '300px',
+                     });
+                });
+			}
+			var createAcc = document.querySelector('.createAcc-button');
+			if (createAcc) {
+				createAcc.addEventListener('click', function (event) {
+                    event.preventDefault();
+
+                	iziToast.error({
+                        title: 'Error',
+                        message: 'Currently not working!',
+						color:'blue',
+                     });
+                });
+			}
+
+		});
+	</script>
+</body>
+</html>
