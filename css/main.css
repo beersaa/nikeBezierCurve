@@ -267,8 +267,6 @@ body {
     margin-top: 50px;
 }
 
-
-
 .side1 {
     position: relative;
     height: 40%;
@@ -324,10 +322,26 @@ body {
 
 .e1textp{
     margin-top: 2%;
-
     font-size: 15px;
     color: #000000;
     font-weight: bold;
+}
+
+.e1buy{
+    width: 30%;
+    height: 30px;
+    background-color: rgb(24, 24, 24);
+    color: white;
+    font-size: 13px;
+    font-weight: normal;
+    border-radius: 25px;
+    outline: 0px;
+    border: 0;
+}
+
+.e1buy:hover{
+    cursor: pointer;
+    background-color: rgb(87, 87, 87);
 }
 
 .e2{
@@ -365,6 +379,23 @@ body {
     font-weight: bold;
 }
 
+.e2buy{
+    width: 30%;
+    height: 30px;
+    background-color: rgb(24, 24, 24);
+    color: white;
+    font-size: 13px;
+    font-weight: normal;
+    border-radius: 25px;
+    outline: 0px;
+    border: 0;
+}
+
+.e2buy:hover{
+    cursor: pointer;
+    background-color: rgb(87, 87, 87);
+}
+
 .e3{
     margin-left: 10%;
 }
@@ -400,6 +431,23 @@ body {
     font-weight: bold;
 }
 
+.e3buy{
+    width: 30%;
+    height: 30px;
+    background-color: rgb(24, 24, 24);
+    color: white;
+    font-size: 13px;
+    font-weight: normal;
+    border-radius: 25px;
+    outline: 0px;
+    border: 0;
+}
+
+.e3buy:hover{
+    cursor: pointer;
+    background-color: rgb(87, 87, 87);
+}
+
 .e4{
     margin-left: 10%;
 }
@@ -433,6 +481,23 @@ body {
     font-size: 15px;
     color: #000000;
     font-weight: bold;
+}
+
+.e4buy{
+    width: 30%;
+    height: 30px;
+    background-color: rgb(24, 24, 24);
+    color: white;
+    font-size: 13px;
+    font-weight: normal;
+    border-radius: 25px;
+    outline: 0px;
+    border: 0;
+}
+
+.e4buy:hover{
+    cursor: pointer;
+    background-color: rgb(87, 87, 87);
 }
 
 .space1 {

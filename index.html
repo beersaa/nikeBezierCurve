@@ -94,24 +94,28 @@
 					<div class="e1text">Nike Sportswear Essential</div>
 					<div class="e1textu">Men's Mid-Rise Trousers</div>
 					<div class="e1textp">$69.99</div>
+					<div><button id="buy2" class="e1buy">Buy Now!</button></div>
 				</div>
 				<div class="e2">
 					<div class="e2pic"></div>
 					<div class="e2text">Nike Everyday Cushioned</div>
 					<div class="e2textu">Training Crew Socks (6 Pairs)</div>
 					<div class="e2textp">$22</div>
+					<div><button id="buy3" class="e2buy">Buy Now!</button></div>
 				</div>
 				<div class="e3">
 					<div class="e3pic"></div>
 					<div class="e3text">Jordan Dri-FIT Sport</div>
 					<div class="e3textu">Men's Woven Trousers</div>
 					<div class="e3textp">$59.99</div>
+					<div><button id="buy4" class="e3buy">Buy Now!</button></div>
 				</div>
 				<div class="e4">
 					<div class="e4pic"></div>
 					<div class="e4text">NFL Seattle Seahawks (DK Metcalf)</div>
 					<div class="e4textu">Men's Game American Football Jersey</div>
 					<div class="e4textp">$124.99</div>
+					<div><button id="buy5" class="e4buy">Buy Now!</button></div>
 				</div>
 			</div>
 			<div></div>
@@ -269,11 +273,51 @@
 		context.bezierCurveTo(352.6, 415.2, 355.2, 425.7, 362.5, 422.1);
 		context.bezierCurveTo(369.7, 418.9, 397.7, 403.8, 403.4, 401.7);
 		context.closePath();
-		context.fillStyle = 'rgba(255,255,255,0.8)';
+		context.fillStyle = 'rgba(255,255,255,0.7)';
 		context.fill();
 		context.stroke();
 
-		document.getElementById('buy').addEventListener('click', function (event) {
+	document.getElementById('buy').addEventListener('click', function (event) {
+        event.preventDefault();
+
+        var width = 500;
+        var height = 750; 
+        var left = (window.innerWidth - width) / 2;
+        var top = (window.innerHeight - height) / 2;
+        window.open("paypal.html", "CreditCardWindow", "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top);
+
+    });
+	document.getElementById('buy2').addEventListener('click', function (event) {
+        event.preventDefault();
+
+        var width = 500;
+        var height = 750; 
+        var left = (window.innerWidth - width) / 2;
+        var top = (window.innerHeight - height) / 2;
+        window.open("paypal.html", "CreditCardWindow", "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top);
+
+    });
+	document.getElementById('buy3').addEventListener('click', function (event) {
+        event.preventDefault();
+
+        var width = 500;
+        var height = 750; 
+        var left = (window.innerWidth - width) / 2;
+        var top = (window.innerHeight - height) / 2;
+        window.open("paypal.html", "CreditCardWindow", "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top);
+
+    });
+	document.getElementById('buy4').addEventListener('click', function (event) {
+        event.preventDefault();
+
+        var width = 500;
+        var height = 750; 
+        var left = (window.innerWidth - width) / 2;
+        var top = (window.innerHeight - height) / 2;
+        window.open("paypal.html", "CreditCardWindow", "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top);
+
+    });
+	document.getElementById('buy5').addEventListener('click', function (event) {
         event.preventDefault();
 
         var width = 500;
