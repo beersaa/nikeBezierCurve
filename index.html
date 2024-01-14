@@ -129,7 +129,7 @@
 		<div class="foot">
 			<div class="foot-content">
 				<div class="foot-bottom-inc">
-					<div><a onclick="credits(this)">©</a> 2023 Nike, Inc. All Rights Reserved</div>
+					<div><a onclick="credits(this)">©</a> 2023 <img src="slike/mainLogo.png" height="13px">, Inc. All Rights Reserved</div>
 				</div>
 				<div class="icons">
 					<a href="https://www.instagram.com/nike/" target="_blank"><img src="slike/001-instagram.png"></a>
@@ -161,6 +161,7 @@
 				text: "https://github.com/beersaa",
 				icon: "question",
 				confirmButtonColor: "grey"
+
 			});
 		}
 		function toggleBorder(element) {
@@ -227,23 +228,29 @@
 					if(direction=='down'){
 						navbar.style.backgroundColor = 'rgb(255, 255, 255,0.8)';
 					}
+					home.style.color='#474747'
 					home.style.backgroundColor = 'rgb(182, 182, 182,0)';
 					home.style.fontSize = '20px';
 					buy.style.backgroundColor = 'rgb(255, 255, 255,0)';
 					buy.style.fontSize = '17px';
+					buy.style.color='#474747'
 					content.style.backgroundColor = 'rgb(255, 255, 255,0)';
 					content.style.fontSize = '17px';
+					content.style.color='#474747'
 				}
 			});
 
 			var waypointBuy = new Waypoint({
 				element: document.getElementById('selection'),
 				handler: function () {
+					buy.style.color='#000000'
 					buy.style.fontSize = '20px';
 					home.style.backgroundColor = 'rgb(255, 255, 255)';
 					home.style.fontSize = '17px';
+					home.style.color='#000000'
 					content.style.backgroundColor = 'rgb(255, 255, 255)';
 					content.style.fontSize = '17px';
+					content.style.color='#000000'
 					navbar.style.backgroundColor = 'rgb(255, 255, 255,1)';
 				},
 				offset: '80'
